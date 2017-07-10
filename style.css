@@ -1,0 +1,85 @@
+body{
+	padding:0px;
+	margin:0px;
+}
+
+#main {
+	border: 1px solid black;
+	width: 100%;
+	height: auto;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+}
+
+#main #struct {	
+	-webkit-flex-grow: 0; /* Safari 6.1+ */
+    -webkit-flex-shrink: 0; /* Safari 6.1+ */
+    -webkit-flex-basis: 55%; /* Safari 6.1+ */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 55%;
+   
+}
+
+#main #struct:nth-of-type(2) {	
+    -webkit-flex-basis: 45%; /* Safari 6.1+ */
+    flex-basis: 45%; 
+    margin-top:5px;    
+}
+
+#alarms_indicator {
+	margin: 0 auto;
+	width: 80%;
+	display: -webkit-flex; /* Safari */
+    display: flex;
+    margin-bottom:5px;
+}
+
+#alarms_indicator #indicator {
+	-webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+    display: -webkit-flex; /* Safari */
+	display: flex;
+}
+
+#indicator #ind_struct {
+	-webkit-flex-grow: 0; /* Safari 6.1+ */
+    -webkit-flex-shrink: 0; /* Safari 6.1+ */
+    -webkit-flex-basis: 20%; /* Safari 6.1+ */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+}
+
+#indicator #ind_struct:nth-of-type(2) {
+	-webkit-flex-basis: 80%; /* Safari 6.1+ */
+    flex-basis: 80%;     
+}
+
+#circle {
+    width: 16px;
+    height: 16px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;    
+}
+
+.critical {
+	border: 1px solid #ff6624;
+	background: #ff6624;
+}
+
+.warning {
+	border: 1px solid #ffa382;
+	background: #ffa382;
+}
+
+.ok {
+	border: 1px solid #ffa382;
+	background: white;
+}
+
+#right {
+	border: 1px solid blue;
+}
