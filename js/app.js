@@ -19,13 +19,30 @@ app.controller('SparklinePlusController', function ($scope) {
     $scope.options = {
             chart: {
                 type: 'sparklinePlus',
-                height: 100,
+                height: 46,
                 x: function(d, i){return i;},
                 xTickFormat: function(d) {
                     return d3.time.format('%x')(new Date($scope.data[d].x))
                 },
-                duration: 250
+                duration: 250,
+                margin: {
+                    top: 0,
+                    right: 213,
+                    bottom: 10,
+                    left: 10
+                },
+                title: {
+                    enable: true,
+                    text: "HOLA",
+                    //className:"h4",
+                    css: {
+                        width: null,
+                        textAlign: right
+                    }
+                }
+                    
             }
+                
         };
 
         //$scope.data = sine();
