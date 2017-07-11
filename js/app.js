@@ -19,7 +19,7 @@ app.controller('SparklinePlusController', function ($scope) {
     $scope.options = {
             chart: {
                 type: 'sparklinePlus',
-                height: 450,
+                height: 100,
                 x: function(d, i){return i;},
                 xTickFormat: function(d) {
                     return d3.time.format('%x')(new Date($scope.data[d].x))

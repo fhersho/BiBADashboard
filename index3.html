@@ -76,16 +76,33 @@
 				</div>			
 			</div>
 			<div id="struct" class="right_graphs">
+				<!-- GRAFICAS DE LA DERECHA -->
 				<div id="right">
-					SVG TAGS
+					GRAFICAS 1
+						<div ng-controller="SparklinePlusController">
+							<nvd3 options="options" data="data"></nvd3>
+						</div>
+						<div ng-controller="SparklinePlusController">
+							<nvd3 options="options" data="data"></nvd3>
+						</div>
+						<div ng-controller="SparklinePlusController">
+							<nvd3 options="options" data="data"></nvd3>
+						</div>
+				</div>
+				<div id="right">
+					GRAFICAS 2
+				</div>
+				<div id="right">
+					GRAFICAS 3
+				</div>
+				<div id="right">
+					GRAFICAS 4
 				</div>
 			</div>
 		</div>
 
 			<!--=== MY CONTENT ===-->	
-			<div ng-controller="SparklinePlusController">
-				<nvd3 options="options" data="data"></nvd3>
-			</div>
+			
 		</div>
 		<!--=== End Content ===-->
 	</div>
