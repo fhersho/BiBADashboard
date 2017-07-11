@@ -1,1 +1,26 @@
 /* Add here all your css styles (customizations) */
+#main {
+	border: 1px solid black;
+	width: 100%;
+	height: auto;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+}
+
+#main #struct {	
+	-webkit-flex-grow: 0; /* Safari 6.1+ */
+    -webkit-flex-shrink: 0; /* Safari 6.1+ */
+    -webkit-flex-basis: 55%; /* Safari 6.1+ */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 55%;   
+}
+
+#main #struct:nth-of-type(2) {	
+    -webkit-flex-basis: 45%; /* Safari 6.1+ */
+    flex-basis: 45%;     
+}
+
+#right {
+	border: 1px solid blue;
+}
