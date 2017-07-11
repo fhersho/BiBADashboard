@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<title>Dashboard</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Web Fonts 
+		<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+	-->
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+
+	<!-- CSS Header and Footer -->
+	<link rel="stylesheet" href="css/template/header-default.css">
+	<link rel="stylesheet" href="css/template/footer-v1.css">
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="css/plugins/animate.css">
+	<link rel="stylesheet" href="css/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="css/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/plugins/nv.d3.min.css">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="css/template/theme-colors/default.css" id="style_color">
+
+</head>
+
+<body ng-app="DashboardApp">
+	<div class="wrapper">
+		<!--=== Header ===-->
+		<div class="header">
+			<div class="container">
+				<!-- Logo -->
+				<a class="logo" href="index.html">
+					<img src="img/EyS_0.png" alt="Logo">
+				</a>
+				<!-- End Logo -->
+
+				<!-- Topbar -->
+				<div class="topbar">
+					<ul class="loginbar pull-right">
+						<li class="topbar-devider"></li>
+						<li><a href="page_login.html">logout</a></li>
+					</ul>
+					<ul class="loginbar pull-right">
+						<li><span class="fa fa-circle" style="color:#ff6624"></span> Critical</li>
+						<li><span class="fa fa-circle" style="color:#ffa382"></span> Warning</li>
+						<li><span class="fa fa-circle-thin" style="color:#ff6624"></span> Ok</li>
+					</ul>
+				</div>
+				<!-- End Topbar -->
+
+			</div><!--/end container-->
+		</div>
+		<!--=== End Header ===-->
+
+		<!--=== Content ===-->
+		<div class="container content height-500">
+			<!-- Write Your HTML Codes Here -->
+			<br><br>
+			<div ng-controller="BulletController">
+				<nvd3 options="options" data="data"></nvd3>
+			</div>
+			<div ng-controller="SparklinePlusController">
+				<nvd3 options="options" data="data"></nvd3>
+			</div>
+		</div>
+		<!--=== End Content ===-->
+	</div>
+	<!-- JS Global Compulsory -->
+	<script type="text/javascript" src="js/plugins/jquery.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="js/plugins/bootstrap.min.js"></script>
+
+	<!-- JS Plugings -->
+	<script type="text/javascript" src="js/plugins/angular.min.js"></script>
+	<script type="text/javascript" src="js/plugins/d3.min.js"></script>
+	<script type="text/javascript" src="js/plugins/nv.d3.min.js"></script>
+	<script type="text/javascript" src="js/plugins/angular-nvd3.js"></script>
+
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/app.template.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			App.init();
+		});
+	</script>
+	<!--[if lt IE 9]>
+	<script src="css/plugins/respond.js"></script>
+	<script src="css/plugins/html5shiv.js"></script>
+	<script src="css/plugins/placeholder-IE-fixes.js"></script>
+	<![endif]-->
+</body>
+</html>
