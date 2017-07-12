@@ -27,29 +27,20 @@ app.controller('SparklinePlusController', function ($scope) {
                 "duration": 250,
                 "margin": {
                     "top": 0,
-                    "right": 213,
+                    "right": 70,
                     "bottom": 10,
                     "left": 10
-                },
-                "title": {
+                }                                                  
+            },
+            "title": {
                     "enable": true,
-                    "text": "HOLA",
+                    "text": "Variable 1",
                     "className":"h4",
                     "css": {
                         "width": "nullpx",
-                        "textAlign": "right"
+                        "textAlign": "center"
                     }
-                },
-                "subtitle": {
-                    "enable": false,
-                    "text": "Write Your Subtitle",
-                    "css": {
-                      "width": "nullpx",
-                      "textAlign": "center"
-                    }
-                }
-                    
-            }
+                } 
                 
         };
 
