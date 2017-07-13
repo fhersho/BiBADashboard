@@ -2,17 +2,47 @@ var app = angular.module('DashboardApp', ['nvd3']);
 
 app.controller('BulletController', function ($scope) {
     $scope.options = {
-        chart: {
-            type: 'bulletChart',
-            transitionDuration: 500
-        }
-    };
+            chart: {
+                type: 'multiBarHorizontalChart',
+                height: 200,
+                x: function(d){return d.label;},
+                y: function(d){return d.value;},
+                showControls: false,
+                showValues: false,
+                duration: 500,
+                xAxis: {
+                    showMaxMin: false
+                },
+                yAxis: {
+                    axisLabel: 'Values',
+                    tickFormat: function(d){
+                        return d3.format(',.2f')(d);
+                    }
+                }
+            }
+        };
 
-    $scope.data = {
-        "ranges": [300],
-        "measures": [220],
-        "markers": [220]
-    };
+        $scope.data = [
+            {
+                "key": "Series1",
+                "color": "#d62728",
+                "values": [
+                    {
+                        "label" : "Group A" ,
+                        "value" : 1.8746444827653
+                    } ,
+                    {
+                        "label" : "Group B" ,
+                        "value" : 8.0961543492239
+                    } ,
+                    {
+                        "label" : "Group C" ,
+                        "value" : 0.57072943117674
+                    } 
+                ]
+            }
+            
+        ];
 });
 
 app.controller('SparklinePlusController', function ($scope) {
